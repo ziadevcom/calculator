@@ -1,0 +1,140 @@
+:root {
+  --button-maths-color: #df974c;
+  --result-bg: #22252d;
+  --math-btn: #c35a5c;
+  --green-btn: #26edcb;
+  --button-bg: #272b33;
+  --button-row-bg: #292d36;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  font-family: "Major Mono Display", monospace;
+  transition: all 0.3s ease;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  background: rgb(151, 71, 204);
+  background: radial-gradient(
+    circle,
+    rgba(151, 71, 204, 1) 21%,
+    rgba(120, 104, 222, 1) 100%,
+    rgba(251, 53, 53, 1) 100%
+  );
+}
+
+button {
+  background-color: var(--button-bg);
+  color: white;
+}
+button:focus {
+  outline: none;
+}
+
+.calculator {
+  width: 350px;
+  border-radius: 15px;
+}
+
+.calc-row-container {
+  background-color: var(--button-row-bg);
+  padding: 10px 10px;
+}
+
+.result {
+  background-color: var(--result-bg);
+  color: white;
+  height: 150px;
+  font-size: 30px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 15px;
+  overflow-x: auto;
+  font-weight: bold;
+}
+
+.calc-row {
+  display: flex;
+}
+
+.calc-btn {
+  width: 25%;
+  height: 70px;
+  font-size: 25px;
+  cursor: pointer;
+  margin: 5px;
+  border: none;
+  border-radius: 15px;
+  transition: all 0.2s ease;
+}
+.calc-btn:focus {
+  border-radius: 10px;
+  background: #272b33;
+  box-shadow: inset 20px 20px 60px #21252b, inset -20px -20px 60px #2d313b;
+}
+.calc-btn:hover {
+  opacity: 0.8;
+}
+
+.calc-maths-btn {
+  color: var(--button-maths-color);
+}
+
+/* utilities */
+.flex-double {
+  width: 50%;
+}
+.flex-tripple {
+  width: 75%;
+}
+.btn-text-blue {
+  color: var(--green-btn);
+}
+
+@-webkit-keyframes slideInLeft {
+  from {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.slideInLeft {
+  -webkit-animation-name: slideInLeft;
+  animation-name: slideInLeft;
+}
+
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
