@@ -76,11 +76,11 @@ button:focus {
   border: none;
   border-radius: 15px;
   transition: all 0.2s ease;
+  box-shadow: inset 20px 20px 60px #21252b, inset -20px -20px 60px #2d313b;
 }
 .calc-btn:focus {
   border-radius: 10px;
-  background: #272b33;
-  box-shadow: inset 20px 20px 60px #21252b, inset -20px -20px 60px #2d313b;
+  background: #272b334f;
 }
 .calc-btn:hover {
   opacity: 0.8;
